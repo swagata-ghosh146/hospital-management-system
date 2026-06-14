@@ -5,6 +5,9 @@ import Layout from './components/Layout/Layout'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import Patients from './pages/Patients'
+import Doctors from './pages/Doctors'
+import Appointments from './pages/Appointments'
 
 const queryClient = new QueryClient()
 
@@ -18,6 +21,9 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/patients" element={<Patients />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/appointments" element={<Appointments />} />
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
           </Route>
         </Routes>
